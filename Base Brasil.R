@@ -26,4 +26,8 @@ tabela_resumo_clara <- dados %>%
   mutate(ranking = row_number()) %>%
   
   ungroup()
+
+# Visualização interativa
+datatable(tabela_resumo_clara, options = list(pageLength = 20, scrollX = TRUE))
+
   
