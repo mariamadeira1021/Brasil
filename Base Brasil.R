@@ -17,3 +17,7 @@ tabela_resumo_clara <- dados %>%
            turno, cargo, party_id, votes_type) %>%
   summarise(total_votos = sum(QT_VOTOS, na.rm = TRUE), .groups = "drop") %>%
   
+# Adicionar percentual de votos dentro do município e turno
+  group_by(level_2, round) %>%
+  mutate(percentual = round(100 * total_votos / sum(total_votos), 2)) %>%
+  
