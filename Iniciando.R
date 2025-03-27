@@ -7,3 +7,4 @@ use_git_config(user.name = "mariamadeira1021", user.email = "mariamlmadeira10@gm
 # Criando Repositório
 
 use_git()
+library(tidyverse)
